@@ -10,6 +10,8 @@ try:
 except FileNotFoundError:
 	saida = open("saida_html.html", "w")
 
+saida.write("<body background='background2.jpg'><br>")
+
 counter = {}
 counter2 = {}
 
@@ -31,13 +33,13 @@ def gera_pares(dict, entry):
 counter = gera_pares(counter, entrada)
 counter2 = gera_pares(counter2, entrada2)
 
-saida.write("<div style='width:100px; height:100px; border:1px; float:left;'><font size='5'><b>"+ 'Bactéria:' +"</b></font></div>")
+saida.write("<div style='width:100px; height:100px; border:1px; float:left;'><font size='6' color='white'><b>"+ 'Bactéria:' +"</b></font></div>")
 saida.write("<div style='width:100px; height:100px; border:1px; float:left;'></div>")
 saida.write("<div style='width:100px; height:100px; border:1px; float:left;'></div>")
 saida.write("<div style='width:100px; height:100px; border:1px; float:left;'></div>")
 saida.write("<div style='width:100px; height:100px; border:1px; float:left;'></div>")
 
-saida.write("<div style='width:100px; height:100px; border:1px; float:left;'><font size='5'><b>"+ 'Humano:' +"</b></font></div>")
+saida.write("<div style='width:100px; height:100px; border:1px; float:left;'><font size='6' color='white'><b>"+ 'Humano:' +"</b></font></div>")
 saida.write("<div style='width:100px; height:100px; border:1px; float:left;'></div>")
 saida.write("<div style='width:100px; height:100px; border:1px; float:left;'></div>")
 saida.write("<div style='width:100px; height:100px; border:1px; float:left;'></div>")
@@ -100,4 +102,5 @@ for k in counter:
 	else:
 		i += 1
 
+saida.write("<br></body>")
 saida.close()
